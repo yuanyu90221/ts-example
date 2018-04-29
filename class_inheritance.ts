@@ -1,5 +1,5 @@
 class Building {
-  windows: string;
+  windows: string = "window 1";
 
   escalators() {
     console.log('The escalators is moving')
@@ -7,7 +7,9 @@ class Building {
 }
 
 class Building2 extends Building {
-
+  escalators() {
+    console.log(this.windows);
+  }
 }
 // const building = new Building;
 

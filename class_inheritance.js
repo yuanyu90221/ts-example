@@ -10,6 +10,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 var Building = /** @class */ (function () {
     function Building() {
+        this.windows = "window 1";
     }
     Building.prototype.escalators = function () {
         console.log('The escalators is moving');
@@ -21,6 +22,9 @@ var Building2 = /** @class */ (function (_super) {
     function Building2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
+    Building2.prototype.escalators = function () {
+        console.log(this.windows);
+    };
     return Building2;
 }(Building));
 // const building = new Building;
