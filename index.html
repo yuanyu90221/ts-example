@@ -8,6 +8,15 @@
   <script src="class_inheritance.js"></script>
 </head>
 <body>
-  
+  <script>
+    var myNameSpace = (function(){
+      return {
+        displayData: function() {
+          console.log("this is a namespace, get out");
+        }
+      }
+    })();
+    myNameSpace.displayData();
+  </script>
 </body>
 </html>
