@@ -1,6 +1,9 @@
 var myNamespace;
 (function (myNamespace) {
+    myNamespace.name = "Maria";
     function displayData() {
-        console.log("Hi, my name is TESt");
+        return "Hi, my name is TESt";
     }
+    myNamespace.displayData = displayData;
 })(myNamespace || (myNamespace = {}));
+console.log(myNamespace.name);

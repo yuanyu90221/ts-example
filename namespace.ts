@@ -1,5 +1,8 @@
 namespace myNamespace {
-  function displayData() {
-    console.log("Hi, my name is TESt");
+  export const name = "Maria";
+  export function displayData() {
+    return "Hi, my name is TESt";
   }
 }
+
+console.log(myNamespace.name);
