@@ -1,8 +1,3 @@
-namespace myNamespace {
-  export const name = "Maria";
-  export function displayData() {
-    return "Hi, my name is TESt";
-  }
-}
-
-console.log(myNamespace.name);
+///<reference path="module1.ts" />
+import thisSpace = myNamespace.displayData;
+console.log(thisSpace("HELLO this test"));
