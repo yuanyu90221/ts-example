@@ -5,18 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Title</title>
-  <script src="class_inheritance.js"></script>
+  <script src="node_modules/systemjs/dist/system.js"></script>
 </head>
 <body>
   <script>
-    var myNameSpace = (function(){
-      return {
-        displayData: function() {
-          console.log("this is a namespace, get out");
+    // var myNameSpace = (function(){
+    //   return {
+    //     displayData: function() {
+    //       console.log("this is a namespace, get out");
+    //     }
+    //   }
+    // })();
+    // myNameSpace.displayData();
+    SystemJS.config({
+      baseURL: "/",
+      packages: {
+        "/": {
+          defaultExtension:"js"
         }
       }
-    })();
-    myNameSpace.displayData();
+    })
+    SystemJS.import('./app.js');
   </script>
 </body>
 </html>
